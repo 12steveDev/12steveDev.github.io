@@ -1,44 +1,108 @@
 body {
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
     background-color: #121212;
     color: white;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 125px;
 }
 
 header {
-    padding: 20px;
-    background-color: #1f1f1f;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid #ffffff55;
+    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+header * {
+    animation: flicker 2s infinite alternate ease-in-out;
+}
+nav a {
+    animation: neonGlow 1.5s infinite alternate;
 }
 
-nav ul li {
-    display: inline;
+nav a {
+    color: #00ff99;
+    text-decoration: none;
     margin: 10px;
 }
 
-nav ul li a {
-    color: cyan;
-    text-decoration: none;
+nav a:hover {
+    text-decoration: underline;
 }
 
-#misterioso {
-    color: red;
-    font-weight: bold;
+section {
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    margin: 20px; /* Para sombras */
+    border: 2px solid #ffffff55;
+    animation: fadeIn 0.5s ease-in-out;
+}
+section:hover, ul:hover, ol:hover{
+    box-shadow: 0 0 20px #fff3;
 }
 
-#terminal {
-    background-color: black;
+section button {
+    background: none;
+    border: none;
+    color: #ddd;
+}
+section button:hover {
+    text-decoration: underline;
+}
+
+aside {
+    padding: 20px;
+}
+
+ul, ol {
+    padding: 15px 30px;
+    background-color: #222;
+    border-radius: 10px;
+    border: 2px solid #ffffff55;
+}
+li {
+    padding: 2.5px;
+    width: fit-content;
+}
+li:hover {
+    background-color: #333;
+}
+
+footer {
+    text-align: center;
     padding: 10px;
-    border-radius: 5px;
-    width: 50%;
-    margin: auto;
+    background-color: #1e1e1e;
+    color: #ffffff44;
 }
 
-#cmd {
-    width: 80%;
-    padding: 5px;
+.oculto {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes flicker {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99; }
+    50% { text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99; }
+    100% { text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99; }
 }
