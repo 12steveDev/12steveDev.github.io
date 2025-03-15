@@ -3,25 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a 12steveDev</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #121212;
-            color: white;
-            padding: 10px;
-        }
-        h1 {
-            font-size: 3em;
-            color: #00ffcc;
-        }
-        p {
-            font-size: 1.2em;
-        }
-    </style>
+    <title>12steveDev - La Web Oficial</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>🔥 ¡Mami malévola! 🔥</h1>
+    <header>
+        <h1>¡Bienvenido a la web de 12steveDev!</h1>
+        <p>Donde la programación y las parodias tecnológicas se fusionan.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="notroid.html">Notroid</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a id="misterioso" href="#">???</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>¿Qué es 12steveDev?</h2>
+            <p>Un programador que hace parodias, sistemas raros y experimenta con tecnología.</p>
+        </section>
+
+        <section>
+            <h2>Prueba la Terminal de Notroid</h2>
+            <div id="terminal">
+                <p>Bienvenido a Notroid CLI</p>
+                <input type="text" id="cmd" placeholder="Escribe un comando...">
+            </div>
+        </section>
+
+        <section>
+            <h2>Renderiza un archivo .img de Notroid</h2>
+            <input type="file" id="fileInput">
+            <div id="imgRender"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 12steveDev - Todos los bugs son features.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
