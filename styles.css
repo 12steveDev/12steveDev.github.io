@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: cyan;
+    text-decoration: none;
+}
+
+#misterioso {
+    color: red;
+    font-weight: bold;
+}
+
+#terminal {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+}
+
+#cmd {
+    width: 80%;
+    padding: 5px;
+}
