@@ -3,49 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12steveDev - La Web Oficial</title>
+    <title>Mi primera misión HTML</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>¡Bienvenido a la web de 12steveDev!</h1>
-        <p>Donde la programación y las parodias tecnológicas se fusionan.</p>
+        <h1 id="titulo"></h1>
+        <nav>
+            <a href="#">Proyectos</a>
+            <a href="#">Notroid</a>
+            <a href="#">ECSE</a>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="notroid.html">Notroid</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a id="misterioso" href="#">???</a></li>
-        </ul>
-    </nav>
-
     <main>
+        <h2>Preguntas clave:</h2>
         <section>
-            <h2>¿Qué es 12steveDev?</h2>
-            <p>Un programador que hace parodias, sistemas raros y experimenta con tecnología.</p>
+            <h2>¿Cómo surgió el nombre "Notroid"?</h2>
+            <p>El nombre surgió de el famoso y anticuado "Android", pero como en ese momento yo programaba en Python, y como saben: lo contrario de And es Not, pues nació Notroid jejeje.</p>
+            <button onclick="mostrarMas(this)">Ver más</button>
+            <p class="oculto">Además, Notroid es una forma de rebelión contra Android...</p>
         </section>
-
         <section>
-            <h2>Prueba la Terminal de Notroid</h2>
-            <div id="terminal">
-                <p>Bienvenido a Notroid CLI</p>
-                <input type="text" id="cmd" placeholder="Escribe un comando...">
-            </div>
+            <h2>¿Cómo empezé en la programación?</h2>
+            <p>Aquí hay 2 puntos claves:</p>
+            <article>
+                <h3>Primeros pasos en Minecraft</h3>
+                <p>Según mis padres, antes de conocer todo esto de programar y cosas así, yo hacia muchas cosas en Minecraft con los <b>bloques de comandos</b>.</p>
+                <p>Osea, sería como <i>"Ya previsto"</i></p>
+            </article>
+            <article>
+                <h3>Curiosidad de origen de las cosas</h3>
+                <p>Esto si yo estoy conciente que es verdad. Siempre he sentido unas ganas tremendas de <b>saber cómo funcionan las cosas</b>, por más dificil que sean.</p>
+                <p>Aunque lo que ni yo entiendo es, ¿Porqué me gusta tanto complicarme la vida yo solito si <i>tengo menos paciencia que RAM de Chip-8?</i></p>
+            </article>
         </section>
-
-        <section>
-            <h2>Renderiza un archivo .img de Notroid</h2>
-            <input type="file" id="fileInput">
-            <div id="imgRender"></div>
-        </section>
+        <aside>
+            <h2>Tambien tengo una preferencia altísima de lenguajes:</h2>
+            <h3>Lenguajes personales:</h3>
+            <ol>
+                <li>Python</li>
+                <li>C</li>
+                <li>Assembly</li>
+            </ol>
+            <h2>Y obviamente conflictos con varias cosas:</h2>
+            <ul>
+                <li>AndroidX</li>
+                <li>Bugs que <i>no son feature</i> (solo mis reales entenderán...)</li>
+                <li>Plataformas mundiales que no pueden dar un simple "stdio.exe", sino que mandan a hacer una busqueda del tesoro, y todavía más, para un "stdio64.exe", <b>¡Respeto para los 32 bits!</b></li>
+            </ul>
+        </aside>
     </main>
 
-    <footer>
-        <p>© 2025 12steveDev - Todos los bugs son features.</p>
-    </footer>
+    <!-- Próximamente bonus opcional... -->
 
+    <footer>
+        <p>&copy; 2025 - Creado por 12steve</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
