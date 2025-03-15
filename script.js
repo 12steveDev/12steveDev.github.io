@@ -1,21 +1,20 @@
-document.getElementById("misterioso").addEventListener("click", function() {
-    alert("¡Has descubierto el botón misterioso! Pero... ¿qué sigue? 😏");
-});
-
-// Simulación básica de Notroid CLI
-document.getElementById("cmd").addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        alert("Comando ejecutado: " + this.value);
-        this.value = "";
+function mostrarMas(btn) {
+    let extraText = btn.nextElementSibling;
+    if (extraText.style.display === "none") {
+        extraText.style.display = "block";
+        btn.innerText = "Ver menos";
+    } else {
+        extraText.style.display = "none";
+        btn.innerText = "Ver más";
     }
-});
-
-// Renderizar archivos .img de Notroid (solo muestra el contenido por ahora)
-document.getElementById("fileInput").addEventListener("change", function(event) {
-    let file = event.target.files[0];
-    let reader = new FileReader();
-    reader.onload = function(e) {
-        document.getElementById("imgRender").innerText = "Contenido: \n" + e.target.result;
-    };
-    reader.readAsText(file);
-});
+}
+const texto = "Mi Web Básica";
+let i = 0;
+function escribirTitulo() {
+    if (i < texto.length) {
+        document.getElementById("titulo").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribirTitulo, 150);
+    }
+}
+document.addEventListener("DOMContentLoaded", escribirTitulo);
