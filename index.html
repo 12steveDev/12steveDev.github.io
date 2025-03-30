@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows 93</title>
+    <title>Drag and Drop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,6 +13,9 @@
         </div>
         <div class="icon" data-app="calculadora">
             📊<br>Calculadora
+        </div>
+        <div class="icon" data-app="bloc_de_notas">
+            📚<br>Bloc de Notas
         </div>
 
         <!-- Ventanas -->
@@ -45,6 +48,16 @@
                     <b id="calculadora-output">Resultado: Presiona [Calcular] para ver.</b><br><br>
                     <button type="submit">Calcular</button>
                 </form>
+            </div>
+        </div>
+        <div class="window" id="bloc_de_notas-window" style="display: none;">
+            <div class="title-bar">
+                <span>bloc_de_notas.exe</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="content">
+                <h2>Este equipo no tiene memoria suficiente para abrir este documento.</h2>
+                <button onclick="this.closest('.window').style.display = 'none'">Entendido</button>
             </div>
         </div>
     </div>
