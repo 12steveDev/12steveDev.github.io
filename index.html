@@ -3,63 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera misión HTML</title>
+    <title>Windows 93</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 id="titulo"></h1>
-        <nav>
-            <a href="#">Proyectos</a>
-            <a href="#">Notroid</a>
-            <a href="#">ECSE</a>
-        </nav>
-    </header>
+    <div class="desktop">
+        <div class="icon" data-app="hola_mundo">
+            🥶<br>Hola Mundo
+        </div>
+        <div class="icon" data-app="calculadora">
+            📊<br>Calculadora
+        </div>
 
-    <main>
-        <h2>Preguntas clave:</h2>
-        <section>
-            <h2>¿Cómo surgió el nombre "Notroid"?</h2>
-            <p>El nombre surgió de el famoso y anticuado "Android", pero como en ese momento yo programaba en Python, y como saben: lo contrario de And es Not, pues nació Notroid jejeje.</p>
-            <button onclick="mostrarMas(this)">Ver más</button>
-            <p class="oculto">Además, Notroid es una forma de rebelión contra Android...</p>
-        </section>
-        <section>
-            <h2>¿Cómo empezé en la programación?</h2>
-            <p>Aquí hay 2 puntos claves:</p>
-            <article>
-                <h3>Primeros pasos en Minecraft</h3>
-                <p>Según mis padres, antes de conocer todo esto de programar y cosas así, yo hacia muchas cosas en Minecraft con los <b>bloques de comandos</b>.</p>
-                <p>Osea, sería como <i>"Ya previsto"</i></p>
-            </article>
-            <article>
-                <h3>Curiosidad de origen de las cosas</h3>
-                <p>Esto si yo estoy conciente que es verdad. Siempre he sentido unas ganas tremendas de <b>saber cómo funcionan las cosas</b>, por más dificil que sean.</p>
-                <p>Aunque lo que ni yo entiendo es, ¿Porqué me gusta tanto complicarme la vida yo solito si <i>tengo menos paciencia que RAM de Chip-8?</i></p>
-            </article>
-        </section>
-        <aside>
-            <h2>Tambien tengo una preferencia altísima de lenguajes:</h2>
-            <h3>Lenguajes personales:</h3>
-            <ol>
-                <li>Python</li>
-                <li>C</li>
-                <li>Assembly</li>
-            </ol>
-            <h2>Y obviamente conflictos con varias cosas:</h2>
-            <ul>
-                <li>AndroidX</li>
-                <li>Bugs que <i>no son feature</i> (solo mis reales entenderán...)</li>
-                <li>Plataformas mundiales que no pueden dar un simple "stdio.exe", sino que mandan a hacer una busqueda del tesoro, y todavía más, para un "stdio64.exe", <b>¡Respeto para los 32 bits!</b></li>
-            </ul>
-        </aside>
-    </main>
+        <!-- Ventanas -->
+        <div class="window" id="hola_mundo-window" style="display: none;">
+            <div class="title-bar">
+                <span>hola_mundo.exe</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="content">
+                <h1>¡Hola Mundo!</h1>
+            </div>
+        </div>
+        <div class="window" id="calculadora-window" style="display: none;">
+            <div class="title-bar">
+                <span>Calculadora.exe</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="content">
+                <h1>📊 Calculadora Profesional</h1>
+                <form name="calculadora-form" style="background: #00000022; padding: 0 5px">
+                    <p style="display: inline;">Si</p>
+                    <input type="text" name="name1" style="display: inline;" required>
+                    <p style="display: inline;"> tiene </p>
+                    <input type="text" name="num1" style="display: inline; width: 40px;" required>
+                    <p style="display: inline;"> manzanas y </p>
+                    <input type="text" name="name2" style="display: inline;" required>
+                    <p style="display: inline;"> le quita </p>
+                    <input type="text" name="num2" style="display: inline; width: 40px;" required>
+                    <p style="display: inline;"> manzanas. </p><br><br>
+                    <b id="calculadora-output">Resultado: Presiona [Calcular] para ver.</b><br><br>
+                    <button type="submit">Calcular</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <!-- Próximamente bonus opcional... -->
-
-    <footer>
-        <p>&copy; 2025 - Creado por 12steve</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
