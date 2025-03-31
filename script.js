@@ -116,7 +116,7 @@ GPU: Voodoo 1 (emulado)
                 document.body.innerHTML = `
                 <div style="background: #000; color: red; height: 100vh; display: grid; place-items: center; font-family: monospace;">
                     <h1>SYSTEM FAILURE</h1>
-                    <p>Windows 93 se ha autodestruido. (Mentira, recarga la página).</p>
+                    <p>Windows 93 se ha autodestruido. (Nahh mentira, recarga la página).</p>
                 </div>
                 `;
             }, 3000);
