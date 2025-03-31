@@ -17,6 +17,9 @@
         <div class="icon" data-app="bloc_de_notas">
             📚<br>Bloc de Notas
         </div>
+        <div class="icon" data-app="terminal">
+            💻<br>Terminal
+        </div>
 
         <!-- Ventanas -->
         <div class="window" id="hola_mundo-window" style="display: none;">
@@ -56,8 +59,26 @@
                 <button class="close-btn">X</button>
             </div>
             <div class="content">
-                <h2>Este equipo no tiene memoria suficiente para abrir este documento.</h2>
+                <div style="display: flex; justify-content: space-between;">
+                    <textarea style="resize: none; width: 90%;" rows="15" cols="50"></textarea>
+                    <div style="display: flex; flex-direction: column;">
+                        <button>Acción 1</button>
+                        <button>Acción 2</button>
+                    </div>
+                </div>
                 <button onclick="this.closest('.window').style.display = 'none'">Entendido</button>
+            </div>
+        </div>
+        <div class="window" id="terminal-window" style="display: block;">
+            <div class="title-bar">
+                <span>terminal.exe</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="content" style="padding: 0;">
+                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <textarea id="terminal-output" rows="15">Win93 Terminal Oficial</textarea>
+                    <input type="text" id="terminal-input" autocapitalize="off" autocomplete="off">
+                </div>
             </div>
         </div>
     </div>
